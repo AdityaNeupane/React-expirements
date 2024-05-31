@@ -2,6 +2,7 @@
 
 import './App.css'
 import Hello from './components/Hello'
+ import Props from './components/Props'
 
  const athletes = [
   {
@@ -70,6 +71,7 @@ import Hello from './components/Hello'
 function App() {
   
   return (
+    <>
     <div className="container">
      
       {athletes.map((athlete, index) => (
@@ -82,9 +84,18 @@ function App() {
         />
       ))}
 
+     <Props
+     name = "aditya"
+     description = "aditya is a good boy"
+     age = {22}
+     marriagestatus = {true}
+    
+     />
 
      </div>
-  )
+     </>
+     
+  );
 }
 
-export default App
+export default App;
